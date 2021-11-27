@@ -57,7 +57,7 @@ main {
     transition: all 0.5s ease;
 }
 
-.td_home-slider__container__text--link:hover {
+.td_home-slider__container__text--link-more:hover {
     color: var(--orange);
     transition: all 0.5s ease;
 }
@@ -71,6 +71,7 @@ main {
 ul.td_home-slider__nav li {
     display: inline;
     padding: 0.2rem;
+    cursor: pointer;
 }
 
 .td_home-slider__nav__link--current i {

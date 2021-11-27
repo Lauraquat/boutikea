@@ -1,0 +1,80 @@
+body {
+    overflow: hidden;
+}
+
+main {
+    overflow: visible;
+    width: 100%;
+}
+
+.td_home-slider__slide--1 {
+    background-image: url(../img/modern-armchair.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.td_home-slider__slide--2 {
+    background-image: url(../img/modern-chair.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.td_home-slider__slide--3 {
+    background-image: url(../img/modern-armchair-2.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    left: 200%;
+}
+
+.td_home-slider__container__text {
+    margin: 2rem 10rem;
+}
+
+.td_home-slider__container__text--title-point {
+    color: var(--orange);
+    font-size: 0.8rem;
+}
+
+.td_home-slider__container__text--link-more {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--noir);
+    transition: all 0.5s ease;
+}
+
+.td_home-slider__container__text--link:hover {
+    color: var(--orange);
+    transition: all 0.5s ease;
+}
+
+.td_home-slider__nav__link i {
+    color: var(--noir);
+    font-size: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+ul.td_home-slider__nav li {
+    display: inline;
+    padding: 0.2rem;
+}
+
+.td_home-slider__nav__link--current i {
+    font-size: 0.7rem;
+    color: var(--orange);
+    transition: all 0.5s ease;
+}

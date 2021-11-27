@@ -30,7 +30,7 @@ $(document).ready(function () {
         let count_home_sliders = home_sliders.length;
 
         if (count_home_sliders > 1) {
-            $('<ul class="td_home-slider__nav w-100 position-fixed bottom-0 start-50"></ul>').appendTo('main');
+            $('<ul class="td_home-slider__nav position-fixed bottom-0 start-50"></ul>').appendTo('main');
             let home_slider_nav = $("ul.td_home-slider__nav");
 
             for (let i = 1; i <= count_home_sliders; i++) {

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Glamor";
-    src: url("/assets/font/Glamor-Regular.ttf") format("truetype");
+    src: url("../font/Glamor-Regular.ttf") format("truetype");
 }
 
 * {
@@ -297,15 +297,15 @@ ul.td_home-slider__nav li {
 }
 
 .ls_timeline--img1:after {
-    background-image: url(/assets/img/ls_chaise4.jpg);
+    background-image: url(../img/ls_chaise4.jpg);
 }
 
 .ls_timeline--img2:after {
-    background-image: url(/assets/img/ls_chaise3.jpg);
+    background-image: url(../img/ls_chaise3.jpg);
 }
 
 .ls_timeline--img3:after {
-    background-image: url(/assets/img/ls_chaise2.jpg);
+    background-image: url(../img/ls_chaise2.jpg);
 }
 
 

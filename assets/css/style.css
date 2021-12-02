@@ -311,7 +311,7 @@ ul.td_home-slider__nav li {
 
 /*Css Laura*/
 
-.lq_nav--ul {
+.lq_nav {
     gap: 7rem;
     top: 50%;
     transform: translateY(-50%);
@@ -334,7 +334,6 @@ ul.td_home-slider__nav li {
 
 .lq_product-details {
     background-color: var(--beige);
-    padding: 20px;
 }
 
 .lq_link-more {

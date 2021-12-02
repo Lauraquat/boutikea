@@ -31,4 +31,5 @@
     color: var(--noir);
     transition: all 0.5s ease;
     display: block;
+    /*mettre en orange au hover*/
 }

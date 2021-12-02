@@ -30,7 +30,7 @@ html {
 body {
     height: 100vh;
     width: 100vw;
-    /*overflow-y: hidden;*/
+    /* overflow-y: hidden; */
     overflow-x: hidden;
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem !important;
@@ -56,6 +56,10 @@ h2 {
     font-size: 3rem;
 }
 
+.title-boutikea {
+    font-size: 8rem;
+}
+
 .title-point {
     color: var(--orange);
     font-size: 0.8rem;
@@ -73,6 +77,9 @@ h2 {
     z-index: 1;
 }
 
+#quiSommesNous {
+    transform: scale(0);
+}
 
 /*Btn Dark mode*/
 
@@ -213,6 +220,9 @@ main {
     width: 30%;
 }
 
+.slide-1 {
+    width: 50%;
+}
 
 /* RETIRER CETTE CLASSE ET UTILISER LA CLASSE title-point de style.css */
 
@@ -343,4 +353,14 @@ ul.td_home-slider__nav li {
     transition: all 0.5s ease;
     display: block;
     /*mettre en orange au hover*/
+}
+
+.dezoom-animation {
+    transform: scale(0);
+    transition: all 1s ease;
+}
+
+.zoom-animation {
+    transform: scale(1) !important;
+    transition: all 1.5s ease;
 }

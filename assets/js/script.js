@@ -40,4 +40,15 @@ $(document).ready(function() {
             $('.td_home-slider__nav__link').first().addClass('td_home-slider__nav__link--current');
         }
     }
+
+    $(document).on('click', 'a[href$="#home"]', function(e) {
+        // 2 secondes
+        $("main").toggleClass("dezoom-animation");
+        setTimeout(function(){
+            $("main").fadeOut(500);
+             $("#quiSommesNous").toggleClass("zoom-animation");
+            }, 500);
+
+        e.preventDefault();
+    });
 });

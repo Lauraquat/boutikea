@@ -2,6 +2,7 @@ html {
     overflow-x: hidden;
 }
 
+/* RETIRER CAR PRÉSENT DANS style.css */
 body {
     overflow: hidden;
 }
@@ -49,6 +50,7 @@ main {
     margin: 2rem 10rem;
 }
 
+/* RETIRER CETTE CLASSE ET UTILISER LA CLASSE title-point de style.css */
 .td_home-slider__container__text--title-point {
     color: var(--orange);
     font-size: 0.8rem;

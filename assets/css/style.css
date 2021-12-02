@@ -311,7 +311,7 @@ ul.td_home-slider__nav li {
 
 /*Css Laura*/
 
-.lq_nav {
+.lq_nav--ul {
     gap: 7rem;
     top: 50%;
     transform: translateY(-50%);

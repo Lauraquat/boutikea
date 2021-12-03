@@ -77,11 +77,15 @@ $(document).ready(function () {
             targetPage.addClass("d-flex");
             setTimeout(function() {
                 targetPage.addClass("animation_zoom");
+                // reset valeurs de départ
+                currentPage.removeClass("animation_dezoom");
             }, 1000);
 
-            // reset valeurs de départ
-            currentPage.removeClass("animation_dezoom");
             // Nouvelle page courante
+            if (currentPage.hasClass("current_page")) {
+                currentPage.removeClass("current_page");
+            }
+            targetPage.addClass("current_page");
             current_page = targetPage;
             current_page_id = target;
         }

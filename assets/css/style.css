@@ -30,7 +30,7 @@ html {
 body {
     height: 100vh;
     width: 100vw;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     overflow-x: hidden;
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem !important;
@@ -75,10 +75,6 @@ h2 {
 
 .ls_header--nav {
     z-index: 1;
-}
-
-#quiSommesNous {
-    transform: scale(0);
 }
 
 /*Btn Dark mode*/
@@ -179,6 +175,10 @@ h2 {
 main {
     overflow: visible;
     width: 100%;
+}
+
+section {
+    height: 100vh;
 }
 
 .td_home-slider__slide--1 {
@@ -355,12 +355,43 @@ ul.td_home-slider__nav li {
     /*mettre en orange au hover*/
 }
 
-.dezoom-animation {
+
+/* ANIMATIONS JQUERY */
+
+#quiSommesNous {
     transform: scale(0);
-    transition: all 1s ease;
 }
 
-.zoom-animation {
-    transform: scale(1) !important;
-    transition: all 1.5s ease;
+.animation_dezoom {
+    animation-name: animation_dezoom;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.animation_zoom {
+    animation-name: animation_zoom;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation_dezoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes animation_zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }

@@ -1,4 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
+    var current_page = $(".current_page");
+    var current_page_id = "#" + current_page.attr("id");
+
+    /**
+     * Active home slider
+     */
     addHomeSliderNav();
 
     /**
@@ -7,7 +13,7 @@ $(document).ready(function() {
      * Remove the class "td_home-slider__slide--current" from the old current slide and add it to the new one.
      * Remove the class "td_home-slider__nav__link--current" from the old current link in the slider navigation bar and add it to the new one.
      */
-    $(document).on('click', 'li.td_home-slider__nav__link', function() {
+    $(document).on('click', 'li.td_home-slider__nav__link', function () {
         let home_slider_slide_current = $('.td_home-slider__slide--current');
         let home_slider_nav_link_current = $('.td_home-slider__nav__link--current');
         let this_home_slider_link_data = $(this).data('home-slider__link');
@@ -21,6 +27,25 @@ $(document).ready(function() {
         $(this).addClass('td_home-slider__nav__link--current');
     });
 
+    $(document).on('click', 'a', function (e) {
+        let hrefLink = $(this).attr("href");
+
+        if (hrefLink != current_page_id) {
+            if (hrefLink == '#quiSommesNous') {
+                animatedTransition(hrefLink, current_page, current_page_id);
+                e.preventDefault();
+            } else if (hrefLink == '#boutique') {
+                animatedTransition(hrefLink, current_page, current_page_id);
+                e.preventDefault();
+            } else if (hrefLink == '#contact') {
+                animatedTransition(hrefLink, current_page, current_page_id);
+                e.preventDefault();
+            } else if (hrefLink == '#home') {
+                animatedTransition(hrefLink, current_page, current_page_id);
+                e.preventDefault();
+            }
+        }
+    });
 
     /**
      * Add the home slider navigation bar.
@@ -41,14 +66,24 @@ $(document).ready(function() {
         }
     }
 
-    $(document).on('click', 'a[href$="#home"]', function(e) {
-        // 2 secondes
-        $("main").toggleClass("dezoom-animation");
-        setTimeout(function(){
-            $("main").fadeOut(500);
-             $("#quiSommesNous").toggleClass("zoom-animation");
-            }, 500);
+    function animatedTransition(target, currentPage, currentPageId) {
+        if (target == "#quiSommesNous") {
+            let targetPage = $(`${target}`);
+            currentPage.addClass("animation_dezoom");
+            currentPage.fadeOut(1000);
+            if (targetPage.hasClass("d-none")) {
+                targetPage.removeClass("d-none");
+            }
+            targetPage.addClass("d-flex");
+            setTimeout(function() {
+                targetPage.addClass("animation_zoom");
+            }, 1000);
 
-        e.preventDefault();
-    });
+            // reset valeurs de départ
+            currentPage.removeClass("animation_dezoom");
+            // Nouvelle page courante
+            current_page = targetPage;
+            current_page_id = target;
+        }
+    }
 });

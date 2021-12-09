@@ -7,131 +7,27 @@
     <title>Document</title>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/laura.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/laura.css">
+    <script src="assets/js/jqx-all.js"></script>
+    <link rel="stylesheet" href="/assets/css/jqx.base.css"
+    <link rel="stylesheet" href="/assets/css/laura.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-
-
-
-
-<!--     
-    <section id="boutique" class="w-100 h-100">
-        <div class="lq_boutique row h-100 justify-content-between">
-            <div class="col-1 position-relative">
-                <ul class="lq_nav d-flex flex-column position-absolute">
-                    <li class="lq_nav-item">
-                        <a class="lq_nav-link active link" href="#lq_product1">Produit 1</a>
-                    </li>
-                    <li class="lq_nav-item">
-                        <a class="lq_nav-link link" href="#lq_product2">Produit 2</a>
-                    </li>
-                    <li class="lq_nav-item">
-                        <a class="lq_nav-link link" href="#lq_product3">Produit 3</a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div id="lq_product1" class="col-10 d-flex flex-row">
-                <div class="col-6">
-                    <h2 class="title">Armchair<i class="fas fa-circle title-point"></i></h2>
-                    <img src="assets/img/armchair.png">
-                    <p class="title">199 €</p>
-                    <button type="button" class="btn btn-secondary">Ajouter au panier</button>
-                </div>
-
-                <div class="lq_product-details p-4 col-6">
-                    <div>
-                        <h3 class="lq_product-details--subtitle">Description</h3>
-                        <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
-                    </div>
-                    <div>
-                        <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
-                        <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
-                    </div>
-                    <div>
-                        <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
-                        <p class="lq_product-details--content">Largeur: 82 cm</p>
-                        <p class="lq_product-details--content">Profondeur: 96 cm</p>
-                        <p class="lq_product-details--content">Hauteur: 101 cm</p>
-                        <p class="lq_product-details--content">Larg. assise: 49 cm</p>
-                        <p class="lq_product-details--content">Prof. assise: 54 cm</p>
-                        <p class="lq_product-details--content">Haut. assise: 45 cm</p>
-                    </div>
-                    <a href="#contact" id="contactProduct1" class="lq_link-more mt-4 link" name="product1">Nous contacter au sujet de ce produit</a>
-                </div>
-            </div>
-
-
-            <div id="lq_product2" class="col-10 d-flex flex-row">
-                <div class="col-6">
-                    <h2 class="title">Canapé<i class="fas fa-circle title-point"></i></h2>
-                    <img src="assets/img/canape.png">
-                    <p class="title">399 €</p>
-
-                    <button type="button" class="btn btn-secondary">Ajouter au panier</button>
-                </div>
-
-                <div class="lq_product-details col-6 p-4">
-                    <div>
-                        <h3 class="lq_product-details--subtitle">Description</h3>
-                        <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
-                    </div>
-                    <div>
-                        <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
-                        <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
-                    </div>
-                    <div>
-                        <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
-                        <p class="lq_product-details--content">Largeur: 216 cm</p>
-                        <p class="lq_product-details--content">Profondeur: 86 cm</p>
-                        <p class="lq_product-details--content">Hauteur: 88 cm</p>
-                        <p class="lq_product-details--content">Larg. assise: 185 cm</p>
-                        <p class="lq_product-details--content">Prof. assise: 58 cm</p>
-                        <p class="lq_product-details--content">Haut. assise: 44 cm</p>
-                    </div>
-                    <a href="#contact" id="contactProduct2" class="lq_link-more mt-5 link" name="product2">Nous contacter au sujet de ce produit</a>
-                </div>
-            </div>
-
-
-            <div id="lq_product3" class="col-10 d-flex flex-row">
-                <div class="col-6">
-                    <h2 class="title">Loveuse<i class="fas fa-circle title-point"></i></h2>
-                    <img src="assets/img/loveuse.png">
-                    <p class="title">499 €</p>
-
-                    <button type="button" class="btn btn-secondary">Ajouter au panier</button>
-                </div>
-
-                <div class="lq_product-details col-6 p-4">
-                    <div>
-                        <h3 class="lq_product-details--subtitle">Description</h3>
-                        <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
-                    </div>
-                    <div>
-                        <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
-                        <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
-                    </div>
-                    <div>
-                        <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
-                        <p class="lq_product-details--content">Largeur: 169 cm</p>
-                        <p class="lq_product-details--content">Profondeur: 100 cm</p>
-                        <p class="lq_product-details--content">Hauteur: 40 cm</p>
-                        <p class="lq_product-details--content">Larg. assise: 160 cm</p>
-                        <p class="lq_product-details--content">Prof. assise: 90 cm</p>
-                        <p class="lq_product-details--content">Haut. assise: 40 cm</p>
-                    </div>
-                    <a href="#contact" id="contactProduct3" class="lq_link-more mt-5 link" name="product3">Nous contacter au sujet de ce produit</a>
-                </div>
-            </div>
+    <!-- Notifications-->
+    <div id="successNotification">
+        <div id="successText">
         </div>
-    </section>
--->
+    </div>
+
+    <div id="errorNotification">
+        <div id="errorText">
+        </div>
+    </div>
+
+
 
     <section id="contact" class="row text-center">
         <div class="col-6 h-100">
@@ -151,10 +47,7 @@
 
                 <!-- Champ caché qui s'affiche lorsque l'on clique sur "en savoir plus sur le produit"-->
                 <div id="productField" class="input-group d-none mb-2">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Produit :</span>
-                    </div>
-                        <input id="productValue" type="text" class="form-control" value="" disabled="disabled"/>
+                    <input id="productValue" type="text" class="form-control" value="" disabled="disabled"/>
                 </div>
                 
                 <div class="input-group mb-2">
@@ -163,8 +56,8 @@
 
 
                 <div class="form-row mt-4">
-                    <button type="button" name="return" class="btn btn-block btn-secondary link me-4">Annuler</button>
-                    <button type="submit" id="send" name="send" class="btn btn-block btn-secondary link">Envoyer</button>
+                    <button type="button" id="return" name="return" class="btn btn-block btn-secondary link me-4">Annuler</button>
+                    <button type="button" id="send" name="send" class="btn btn-block btn-secondary link">Envoyer</button>
                 </div>
             </form>
         </div>

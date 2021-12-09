@@ -17,13 +17,13 @@ $(document).ready(function() {
         $('#contactForm').trigger('reset');
         $("#successText").text('Message bien envoyé !');
         $("#successNotification").jqxNotification("open");
-    })
+    });
 
     $('#return').click(function(){
         $('#contactForm').trigger('reset');
         $("#errorText").text("Message non envoyé");
         $("#errorNotification").jqxNotification("open");
-    })
+    });
 
 
 });

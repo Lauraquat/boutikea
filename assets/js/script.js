@@ -92,10 +92,6 @@ $(document).ready(function() {
     }
 
 
-
-
-
-
     /*lien entre produits et page contact*/
     $('.lq_link-more').click(function() {
         var value = $(this).attr("name");
@@ -104,9 +100,33 @@ $(document).ready(function() {
         /*Affiche le champ produit dans le formulaire de contact*/
         $('#productField').removeClass("d-none");
     });
-});
 
-$(document).ready(function() {
+
+    // Initialisation des notifications
+    $("#successNotification").jqxNotification({
+        width: 250, position: "bottom-right", opacity: 0.9,
+        autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 3000, template: "success"
+    });
+
+    $("#errorNotification").jqxNotification({
+        width: 250, position: "bottom-right", opacity: 0.9,
+        autoOpen: false, animationOpenDelay: 800, autoClose: true, autoCloseDelay: 3000, template: "error"
+    });
+
+    /*Appel des notifications + réinitialisation du formulaire*/
+    $('#send').click(function(){
+        $('#contactForm').trigger('reset');
+        $("#successText").text('Message bien envoyé !');
+        $("#successNotification").jqxNotification("open");
+    });
+
+    $('#return').click(function(){
+        $('#contactForm').trigger('reset');
+        $("#errorText").text("Message non envoyé");
+        $("#errorNotification").jqxNotification("open");
+    });
+
+    /*dark mode*/
     $('.ls_checkbox').on('change', function() {
         var is_it_checked = $(this).prop("checked"); //check the checkbox is checked or not
         if (is_it_checked == true) {
@@ -126,4 +146,5 @@ $(document).ready(function() {
             $(document.body).removeAttr('style');
         }
     })
-})
+});
+

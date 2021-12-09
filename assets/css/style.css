@@ -303,6 +303,7 @@ ul.td_home-slider__nav li {
 
 .lq_cover{
     object-fit:cover;
+    object-position: bottom;
 }
 
 

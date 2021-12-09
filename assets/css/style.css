@@ -30,7 +30,7 @@ html {
 body {
     height: 100vh;
     width: 100vw;
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
     overflow-x: hidden;
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem !important;
@@ -296,11 +296,13 @@ ul.td_home-slider__nav li {
 
 .lq_link-more {
     text-decoration: none;
-    font-weight: bold;
     color: var(--noir);
     transition: all 0.5s ease;
     display: block;
-    /*mettre en orange au hover*/
+}
+
+.lq_cover{
+    object-fit:cover;
 }
 
 

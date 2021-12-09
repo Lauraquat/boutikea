@@ -107,6 +107,7 @@
         </div>
     </section>
 
+
     <section id="boutique" class="w-100 h-100 d-none">
         <div class="lq_boutique row h-100 justify-content-between">
             <div class="col-1 position-relative">
@@ -150,7 +151,7 @@
                         <p class="lq_product-details--content">Prof. assise: 54 cm</p>
                         <p class="lq_product-details--content">Haut. assise: 45 cm</p>
                     </div>
-                    <a href="#contact" id="contactProduct1" class="lq_link-more mt-4 link" val="product1">Nous contacter au sujet de ce produit</a>
+                    <a href="#contact" id="contactProduct1" class="lq_link-more mt-4 link" name="product1">Nous contacter au sujet de ce produit</a>
                 </div>
             </div>
 
@@ -182,7 +183,7 @@
                         <p class="lq_product-details--content">Prof. assise: 58 cm</p>
                         <p class="lq_product-details--content">Haut. assise: 44 cm</p>
                     </div>
-                    <a href="#contact" id="contactProduct2" class="lq_link-more mt-5 link" val="product2">Nous contacter au sujet de ce produit</a>
+                    <a href="#contact" id="contactProduct2" class="lq_link-more mt-5 link" name="product2">Nous contacter au sujet de ce produit</a>
                 </div>
             </div>
 
@@ -214,12 +215,51 @@
                         <p class="lq_product-details--content">Prof. assise: 90 cm</p>
                         <p class="lq_product-details--content">Haut. assise: 40 cm</p>
                     </div>
-                    <a href="#contact" id="contactProduct3" class="lq_link-more mt-5 link" val="product3">Nous contacter au sujet de ce produit</a>
+                    <a href="#contact" id="contactProduct3" class="lq_link-more mt-5 link" name="product3">Nous contacter au sujet de ce produit</a>
                 </div>
             </div>
-
         </div>
     </section>
+
+
+    <section id="contact" class="w-100 h-100 d-none">
+        <h2 class="title">Nous contacter</h2>
+        <form method="#" id="contactForm" autocomplete="off" name="contact">
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nom :</span>
+                </div>
+                <input autocomplete="off" type="text" id="lastname" class="form-control"/>
+            </div>
+            
+            <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Prénom :</span>
+                </div>
+                <input autocomplete="off" type="text" id="firstname" class="form-control"/>
+            </div>
+        
+            <!-- Champ caché qui s'affiche lorsque l'on clique sur "en savoir plus sur le produit"-->
+            <div id="productField" class="input-group d-none mb-2">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Produit :</span>
+                </div>
+                    <input id="productValue" type="text" class="form-control" value="" disabled="disabled"/>
+            </div>
+            
+            <div class="input-group mb-2">
+                <span class="input-group-text">Message :</span>
+                <textarea id="message" name="message" class="form-control"></textarea>
+            </div>
+
+
+            <div class="form-row">
+                <button type="button" name="return" class="btn btn-block btn-secondary link">Annuler</button>
+                <button type="submit" id="send" name="send" class="btn btn-block btn-secondary link">Envoyer le message</button>
+            </div>
+        </form>
+    </section>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

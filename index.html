@@ -39,10 +39,13 @@
                             <a class="nav-link link" href="#contact">Contact</a>
                         </li>
                     </ul>
-                    <div class=".ls_nav--swipMode">
-                        <input id="ls_nav--dark-mode" class="ls__nav--toggle" type="checkbox" name="Dark mode" role="switch" value="on">
-                        <label for="dark-mode"></label>
-                        <div class="ls_nav_swipMode--curtain"></div>
+                    <div class="ls_switch me-4">
+                        <input type="checkbox" class="ls_checkbox" id="ls_checkbox">
+                        <label for="ls_checkbox" class="ls_label">
+                        <i class="fas fa-sun"></i>
+                        <i class='fas fa-moon'></i>
+                        <div class='ls_ball'>
+                      </label>
                     </div>
                 </div>
             </div>
@@ -229,24 +232,24 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">Nom :</span>
                 </div>
-                <input autocomplete="off" type="text" id="lastname" class="form-control"/>
+                <input autocomplete="off" type="text" id="lastname" class="form-control" />
             </div>
-            
+
             <div class="input-group mb-2">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Prénom :</span>
                 </div>
-                <input autocomplete="off" type="text" id="firstname" class="form-control"/>
+                <input autocomplete="off" type="text" id="firstname" class="form-control" />
             </div>
-        
+
             <!-- Champ caché qui s'affiche lorsque l'on clique sur "en savoir plus sur le produit"-->
             <div id="productField" class="input-group d-none mb-2">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Produit :</span>
                 </div>
-                    <input id="productValue" type="text" class="form-control" value="" disabled="disabled"/>
+                <input id="productValue" type="text" class="form-control" value="" disabled="disabled" />
             </div>
-            
+
             <div class="input-group mb-2">
                 <span class="input-group-text">Message :</span>
                 <textarea id="message" name="message" class="form-control"></textarea>

@@ -90,4 +90,17 @@ $(document).ready(function () {
             current_page_id = target;
         }
     }
+
+
+
+
+
+
+    /*lien entre produits et page contact*/
+    $('.lq_link-more').click(function() {
+        var value =  $(this).attr("name");
+        $('#productValue').val(value);
+    })
+
+    $('#productField').removeClass("d-none");
 });

@@ -30,7 +30,7 @@ html {
 body {
     height: 100vh;
     width: 100vw;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     overflow-x: hidden;
     font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem !important;
@@ -301,8 +301,8 @@ ul.td_home-slider__nav li {
     display: block;
 }
 
-.lq_cover{
-    object-fit:cover;
+.lq_cover {
+    object-fit: cover;
     object-position: bottom;
 }
 

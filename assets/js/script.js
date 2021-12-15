@@ -164,4 +164,20 @@ $(document).ready(function() {
         $("#successNotification").jqxNotification("open");
     });
 
+
+    //Affichage lightbox
+    $(".lq_img").click(function () {
+        var img = $(this).attr('src');
+        var imgLightbox = img.replace("lq_img--petites", "lq_img--grandes");
+        $(".lq_img--lightbox").html("<img src='" + imgLightbox + "'>");
+        $(".lq_img--lightbox").fadeIn("slow").css("display", "flex");
+
+        console.log('click');
+    });
+
+    $(".lq_img--lightbox").click(function () {
+        $(".lq_img--lightbox").fadeOut("fast");
+    });
+    
+
 });

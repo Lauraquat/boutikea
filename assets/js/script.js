@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     var home = $("#home");
     var about = $("#quiSommesNous");
     var boutique = $("#boutique");
@@ -54,7 +53,9 @@ $(document).ready(function () {
         }
     }
 
-
+    /**
+     * Animations
+     */
     var current_page_id = $("#main-container").data("current_page");
     var current_page = $(`${current_page_id}`);
 
@@ -251,7 +252,7 @@ $(document).ready(function () {
     });
 
     /*Appel des notifications + réinitialisation du formulaire*/
-    $('#contactForm').submit(function (e) {
+    $('#send').click(function (e) {
         e.preventDefault();
         $('#contactForm').trigger('reset');
         $("#successText").text('Message bien envoyé !');
@@ -302,4 +303,6 @@ $(document).ready(function () {
     $(".lq_img--lightbox").click(function () {
         $(".lq_img--lightbox").fadeOut("fast");
     });
+
+
 });

@@ -317,9 +317,9 @@ $(document).ready(function() {
         $(".price3").replaceWith("<p class='title price3'>499€</p>");
     });
     $(yen).click(function() {
-        $(".price1").replaceWith("<p class='title price1'>25617,34Y</p>");
-        $(".price2").replaceWith("<p class='title price2'>51363,41</p>");
-        $(".price3").replaceWith("<p class='title price3'>64236,45</p>");
+        $(".price1").replaceWith("<p class='title price1'>25617,34¥</p>");
+        $(".price2").replaceWith("<p class='title price2'>51363,41¥</p>");
+        $(".price3").replaceWith("<p class='title price3'>64236,45¥</p>");
     });
 
 });

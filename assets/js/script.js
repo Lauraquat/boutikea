@@ -70,13 +70,13 @@ $(document).ready(function () {
     $(document).on('click', 'a', function (e) {
         let hrefLink = $(this).attr("href");
         if (hrefLink != current_page_id) {
-            animatedTransition(hrefLink, current_page, current_page_id, current_page_boutique, current_page_boutique_id);
+            animatedTransition(hrefLink, current_page_id, current_page_boutique, current_page_boutique_id);
             e.preventDefault();
         }
     });
 
 
-    function animatedTransition(targetId, currentPage, currentPageId, currentPageBoutique, currentPageBoutiqueId) {
+    function animatedTransition(targetId, currentPageId, currentPageBoutique, currentPageBoutiqueId) {
 
         if (targetId == "#quiSommesNous") {
             if (currentPageId == "#home") {
@@ -309,7 +309,6 @@ $(document).ready(function () {
     var modal_affichee = "yes";
     $("body").mouseleave(function () {
         if (modal_affichee == "yes") {
-            console.log(modal_affichee);
             $('#inscriptionNewL').modal('show');
             $('#annulerInscription, #validInscription').click(function () {
                 $('#inscriptionNewL').modal('hide');

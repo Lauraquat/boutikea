@@ -329,36 +329,26 @@ ul.td_home-slider__nav li {
 }
 
 
-/* ANIMATIONS JQUERY */
-
-.animation_dezoom {
-    animation-name: animation_dezoom;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.display-none {
+    display: none;
 }
 
-.animation_zoom {
-    animation-name: animation_zoom;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.display-flex {
+    display: flex;
 }
 
-@keyframes animation_dezoom {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(0);
-    }
+.height-100 {
+    height: 100vh;
 }
 
-@keyframes animation_zoom {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
+.width-100 {
+    width: 100%;
+}
+
+.z-index-max {
+    z-index: 999;
+}
+
+.transition {
+    transition: all 1s ease;
 }

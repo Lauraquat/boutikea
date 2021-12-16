@@ -18,11 +18,6 @@
     z-index: 999;
 }
 
-.home {
-    transition: all 1s ease;
-    transform: translateY(100%);
-}
-
 .transition {
     transition: all 1s ease;
 }

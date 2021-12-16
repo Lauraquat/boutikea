@@ -7,12 +7,6 @@ $(document).ready(function () {
     var page_boutique_1 = $("#lq_product1");
     var page_boutique_2 = $("#lq_product2");
     var page_boutique_3 = $("#lq_product3");
- 
-
-    // var clone_home = home.clone();
-    // var clone_about = about.clone();
-    // var clone_boutique = boutique.clone();
-    // var clone_contact = contact.clone();
 
 
     /**

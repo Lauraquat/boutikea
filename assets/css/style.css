@@ -77,6 +77,7 @@ h2 {
     z-index: 1;
 }
 
+
 /*Btn Dark mode*/
 
 .ls_checkbox {
@@ -122,6 +123,7 @@ main {
     overflow: visible;
     width: 100%;
 }
+
 
 /* section {
     height: 100vh;
@@ -305,7 +307,8 @@ ul.td_home-slider__nav li {
     object-position: bottom;
 }
 
-.lq_img, .lq_img--lightbox {
+.lq_img,
+.lq_img--lightbox {
     cursor: pointer
 }
 
@@ -316,7 +319,6 @@ ul.td_home-slider__nav li {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-
     display: none;
     align-items: center;
     justify-content: center;
@@ -327,7 +329,6 @@ ul.td_home-slider__nav li {
     border: 4px white solid;
     border-radius: 5px;
 }
-
 
 .display-none {
     display: none;
@@ -351,4 +352,18 @@ ul.td_home-slider__nav li {
 
 .transition {
     transition: all 1s ease;
+}
+
+
+/*Modal*/
+
+#inscriptionNewL {
+    display: none;
+}
+
+.moneybtn {
+    padding: 0.2rem;
+    border-radius: 50px;
+    width: 2.2rem;
+    border: 2px solid var(--orange);
 }

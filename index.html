@@ -12,13 +12,9 @@
     <link rel="stylesheet" href="./assets/css/jqx.base.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <!-- <link rel="stylesheet" href="./assets/css/thomas.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Boutikea</title>
 </head>
 
@@ -41,9 +37,7 @@
                 <a class="navbar-brand w-25 link" href="#">
                     <h2 class="mb-0">Boutikea<i class="fas fa-circle title-point"></i></h2>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -61,6 +55,11 @@
                             <a class="nav-link link" href="#contact">Contact</a>
                         </li>
                     </ul>
+                    <div id="money" class="me-4">
+                        <button class="moneybtn" id="euro">€</button>
+                        <button class="moneybtn" id="dollar">$</button>
+                        <button class="moneybtn" id="yen">Y</button>
+                    </div>
                     <div class="ls_switch me-4">
                         <input type="checkbox" class="ls_checkbox" id="ls_checkbox">
                         <label for="ls_checkbox" class="ls_label">
@@ -77,77 +76,58 @@
     <div id="main-container" data-current_page="#home">
         <main id="home" class="td_home-slider height-100 position-absolute">
             <!-- Slide 1 -->
-            <div class="td_home-slider__container td_home-slider__slide--1 td_home-slider__slide--current w-100 h-100 d-flex justify-content-start align-items-center position-absolute"
-                data-home-slider_slide="1">
+            <div class="td_home-slider__container td_home-slider__slide--1 td_home-slider__slide--current w-100 h-100 d-flex justify-content-start align-items-center position-absolute" data-home-slider_slide="1">
                 <div class="slide-1 td_home-slider__container__text">
-                    <h1 class="title-boutikea">Boutikea<i
-                            class="fas fa-circle td_home-slider__container__text--title-point"></i></h1>
-                    <a href="#home" class="td_home-slider__container__text--link-more link">En savoir +</a>
+                    <h1 class="title-boutikea">Boutikea<i class="fas fa-circle td_home-slider__container__text--title-point"></i></h1>
+                    <a href="#quiSommesNous" class="td_home-slider__container__text--link-more link">En savoir +</a>
                 </div>
             </div>
             <!-- Slide 2 -->
-            <div class="td_home-slider__container td_home-slider__slide--2 w-100 h-100 d-flex justify-content-start align-items-center position-absolute start-100"
-                data-home-slider_slide="2">
+            <div class="td_home-slider__container td_home-slider__slide--2 w-100 h-100 d-flex justify-content-start align-items-center position-absolute start-100" data-home-slider_slide="2">
                 <div class="td_home-slider__container__text">
                     <h2 class="title">Boutique<i class="fas fa-circle td_home-slider__container__text--title-point"></i>
                     </h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi laboriosam, ipsam repellat
-                        nihil officiis? Vitae laudantium minus odio excepturi omnis! Ad fugiat quo voluptatum eaque
-                        nostrum sed. Veniam, reprehenderit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi laboriosam, ipsam repellat nihil officiis? Vitae laudantium minus odio excepturi omnis! Ad fugiat quo voluptatum eaque nostrum sed. Veniam, reprehenderit.</p>
                     <a href="#boutique" class="td_home-slider__container__text--link-more link">En savoir +</a>
                 </div>
             </div>
             <!-- Slide 3 -->
-            <div class="td_home-slider__container td_home-slider__slide--3 w-100 h-100 d-flex justify-content-start align-items-center position-absolute"
-                data-home-slider_slide="3">
+            <div class="td_home-slider__container td_home-slider__slide--3 w-100 h-100 d-flex justify-content-start align-items-center position-absolute" data-home-slider_slide="3">
                 <div class="td_home-slider__container__text">
-                    <h2 class="title">Contactez nous<i
-                            class="fas fa-circle td_home-slider__container__text--title-point"></i></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi laboriosam, ipsam repellat
-                        nihil officiis? Vitae laudantium minus odio excepturi omnis! Ad fugiat quo voluptatum eaque
-                        nostrum sed. Veniam, reprehenderit.</p>
+                    <h2 class="title">Contactez nous<i class="fas fa-circle td_home-slider__container__text--title-point"></i></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi laboriosam, ipsam repellat nihil officiis? Vitae laudantium minus odio excepturi omnis! Ad fugiat quo voluptatum eaque nostrum sed. Veniam, reprehenderit.</p>
                     <a href="#contact" class="td_home-slider__container__text--link-more link">En savoir +</a>
                 </div>
             </div>
         </main>
 
-        <section id="quiSommesNous"
-            class="width-100 height-100 justify-content-center align-items-center position-absolute display-none transition about">
+        <section id="quiSommesNous" class="width-100 height-100 justify-content-center align-items-center position-absolute display-none transition about">
             <div class="row mt-5 justify-content-between">
                 <div class="col-6 ps-5">
                     <ul class="ls_section--timeline">
                         <li class="ls_timeline--img1">
                             <h3>Opening Ceremony</h3>
-                            <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp;
-                                Busta Rhymes as an opening show.</p>
+                            <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp; Busta Rhymes as an opening show.</p>
                         </li>
                         <li class="ls_timeline--img2">
                             <h3>Main Event</h3>
-                            <p>This is where it all goes down. You will compete head to head with your friends and
-                                rivals. Get ready!</p>
+                            <p>This is where it all goes down. You will compete head to head with your friends and rivals. Get ready!</p>
                         </li>
                         <li class="ls_timeline--img3">
                             <h3>Closing Ceremony</h3>
-                            <p>See how is the victor and who are the losers. The big stage is where the winners bask in
-                                their own glory.</p>
+                            <p>See how is the victor and who are the losers. The big stage is where the winners bask in their own glory.</p>
                         </li>
                     </ul>
                 </div>
                 <div class="col-5 pe-5 d-flex flex-column justify-content-center">
                     <h2 class="pb-3 title">Qui sommes nous?</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae
-                        temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet,
-                        voluptatibus explicabo eaque quia laboriosam obcaecati
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet, voluptatibus explicabo eaque quia laboriosam obcaecati
                         soluta!
                     </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae
-                        temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet,
-                        voluptatibus explicabo eaque quia laboriosam obcaecati
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet, voluptatibus explicabo eaque quia laboriosam obcaecati
                         soluta!
                     </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae
-                        temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet,
-                        voluptatibus explicabo eaque quia laboriosam obcaecati
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet, voluptatibus explicabo eaque quia laboriosam obcaecati
                         soluta!
                     </p>
                 </div>
@@ -173,25 +153,21 @@
 
 
                 <div id="lq_product1" class="col-10 d-flex flex-row">
-                    <div class="col-6">
+                    <div class="col-6 d-flex flex-column justify-content-center align-items-start">
                         <h2 class="title">Armchair<i class="fas fa-circle title-point"></i></h2>
-                        <img src="assets/img/lq_img--petites/armchair.png" class="lq_img">
-                        <p class="title">199 €</p>
+                        <img src="assets/img/lq_img--petites/armchair.png" class="lq_img h-50 ms-auto me-auto">
+                        <p class="title price1">199€</p>
                         <button type="button" class="btn btn-secondary">Ajouter au panier</button>
                     </div>
 
                     <div class="lq_product-details p-4 col-6">
                         <div>
                             <h3 class="lq_product-details--subtitle">Description</h3>
-                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
-                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
                         </div>
                         <div>
                             <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
-                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
-                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
                         </div>
                         <div>
                             <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
@@ -210,10 +186,10 @@
 
 
                 <div id="lq_product2" class="col-10 d-flex flex-row">
-                    <div class="col-6">
+                    <div class="col-6 d-flex flex-column justify-content-center align-items-start">
                         <h2 class="title">Canapé<i class="fas fa-circle title-point"></i></h2>
-                        <img src="assets/img/lq_img--petites/canape.png" class="lq_img">
-                        <p class="title">399 €</p>
+                        <img src="assets/img/lq_img--petites/canape.png" class="lq_img h-50 ms-auto me-auto">
+                        <p class="title price2">399€</p>
 
                         <button type="button" class="btn btn-secondary">Ajouter au panier</button>
                     </div>
@@ -221,15 +197,11 @@
                     <div class="lq_product-details col-6 p-4">
                         <div>
                             <h3 class="lq_product-details--subtitle">Description</h3>
-                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
-                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
                         </div>
                         <div>
                             <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
-                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
-                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
                         </div>
                         <div>
                             <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
@@ -248,10 +220,10 @@
 
 
                 <div id="lq_product3" class="col-10 d-flex flex-row">
-                    <div class="col-6">
+                    <div class="col-6d-flex flex-column justify-content-center align-items-start">
                         <h2 class="title">Loveuse<i class="fas fa-circle title-point"></i></h2>
-                        <img src="assets/img/lq_img--petites/loveuse.png" class="lq_img">
-                        <p class="title">499 €</p>
+                        <img src="assets/img/lq_img--petites/loveuse.png" class="lq_img h-50 ms-auto me-auto">
+                        <p class="title price3">499€</p>
 
                         <button type="button" class="btn btn-secondary">Ajouter au panier</button>
                     </div>
@@ -259,15 +231,11 @@
                     <div class="lq_product-details col-6 p-4">
                         <div>
                             <h3 class="lq_product-details--subtitle">Description</h3>
-                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
-                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
                         </div>
                         <div>
                             <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
-                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
-                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
                         </div>
                         <div>
                             <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
@@ -299,8 +267,7 @@
                     </div>
 
                     <div class="input-group mb-2">
-                        <input autocomplete="off" type="text" id="firstname" class="form-control"
-                            placeholder="Prénom" />
+                        <input autocomplete="off" type="text" id="firstname" class="form-control" placeholder="Prénom" />
                     </div>
 
                     <!-- Champ caché qui s'affiche lorsque l'on clique sur "en savoir plus sur le produit"-->
@@ -313,10 +280,8 @@
                     </div>
 
                     <div class="form-row mt-4">
-                        <button type="button" name="return" id="return"
-                            class="btn btn-block btn-secondary link me-4">Annuler</button>
-                        <button type="submit" id="send" name="send"
-                            class="btn btn-block btn-secondary link">Envoyer</button>
+                        <button type="button" name="return" id="return" class="btn btn-block btn-secondary link me-4">Annuler</button>
+                        <button type="submit" id="send" name="send" class="btn btn-block btn-secondary link">Envoyer</button>
                     </div>
                 </form>
             </div>
@@ -325,17 +290,20 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="inscriptionNexL" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+    <div class="modal fade" id="inscriptionNewL" tabindex="-1">
+        <div class="modal-dialog modal-newsletter">
             <div class="modal-content">
                 <div class="modal-body">
                     <h2 class="tilte">Inscription News Letter<i class="fas fa-circle title-point"></i></h5>
                 </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                </div>
                 <div class="ms-auto me-3 my-3">
-                    <button type="button" name="return" data-bs-dismiss="modal"
-                        class="btn btn-block btn-secondary link me-4">Annuler</button>
-                    <button type="submit" id="#validInscription" name="send" class="btn btn-block btn-secondary link"
-                        data-bs-dismiss="modal">Envoyer</button>
+                    <button type="button" id="annulerInscription" name="return" class="btn btn-block btn-secondary link me-4">Annuler</button>
+                    <button type="submit" id="validInscription" name="send" class="btn btn-block btn-secondary link">Envoyer</button>
                 </div>
             </div>
         </div>
@@ -344,10 +312,6 @@
     <!-- Lightbox-->
     <div class="lq_img--lightbox"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>

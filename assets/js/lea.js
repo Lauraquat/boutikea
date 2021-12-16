@@ -108,7 +108,7 @@ $(document).ready(function() {
             $('.navbar a, .navbar h2, #contact2 h2, #ls_contact-modal h2').css('color', 'white');
             $('#quiSommesNous, #quiSommesNous h2, #quiSommesNous h3').css('color', 'white');
             $('#boutique h2, #boutique, #boutique a').css('color', 'white');
-            $('.td_home-slider__slide--1,.td_home-slider__slide--2,.td_home-slider__slide--3, #contact2 img').css('filter', 'grayscale(1)')
+            $('.td_home-slider__slide--1,.td_home-slider__slide--2,.td_home-slider__slide--3, #contact2 img, .lq_cover').css('filter', 'grayscale(1)')
             $(document.body, '.navbar').css('background-color', 'var(--noir)');
         } else {
             $('.lq_product-details, .navbar, .form-control, .modal-content').removeAttr('style');
@@ -116,8 +116,42 @@ $(document).ready(function() {
             $('.navbar a, .navbar h2, #contact2 h2, #ls_contact-modal h2').removeAttr('style');
             $('#quiSommesNous, #quiSommesNous h2, #quiSommesNous h3').removeAttr('style');
             $('#boutique h2, #boutique, #boutique a').removeAttr('style');
-            $('.td_home-slider__slide--1,.td_home-slider__slide--2,.td_home-slider__slide--3').removeAttr('style');
+            $('.td_home-slider__slide--1,.td_home-slider__slide--2,.td_home-slider__slide--3, .lq_cover').removeAttr('style');
             $(document.body).removeAttr('style');
         };
     });
+
+    /*modal*/
+    var j = 0;
+    if (j == 0) {
+        $("body").mouseleave(function() {
+            j = j + 1;
+            $('#inscriptionNewL').modal('show');
+            $('#annulerInscription, #validInscription').click(function() {
+                $('#inscriptionNewL').modal('hide');
+            });
+        });
+    }
+    /* changement monnaie*/
+    var dollar = $('#dollar');
+    var euro = $('#euro');
+    var yen = $('#yen');
+
+    $(dollar).click(function() {
+        $(".price1").replaceWith("<p class='title price1'>224,67$</p>");
+        $(".price2").replaceWith("<p class='title price2'>450,47$</p>");
+        $(".price3").replaceWith("<p class='title price3'>563,37$</p>");
+    });
+    $(euro).click(function() {
+        $(".price1").replaceWith("<p class='title price1'>199€</p>");
+        $(".price2").replaceWith("<p class='title price2'>399€</p>");
+        $(".price3").replaceWith("<p class='title price3'>499€</p>");
+    });
+    $(yen).click(function() {
+        $(".price1").replaceWith("<p class='title price1'>25617,34Y</p>");
+        $(".price2").replaceWith("<p class='title price2'>51363,41</p>");
+        $(".price3").replaceWith("<p class='title price3'>64236,45</p>");
+    });
+
+
 });

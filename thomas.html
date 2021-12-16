@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/thomas.js"></script>
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jqx-all.js"></script>
+    <script src="./assets/js/thomas.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- <link rel="stylesheet" href="/assets/css/jqx.base.css"> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/thomas.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -14,12 +19,330 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/thomas.css">
-    <title>Boutikea - Vendeur de mobilier</title>
+    <title>Boutikea</title>
 </head>
 
 <body>
+    <!-- Notifications-->
+    <div id="successNotification">
+        <div id="successText">
+        </div>
+    </div>
+
+    <div id="errorNotification">
+        <div id="errorText">
+        </div>
+    </div>
+
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light position-absolute w-100 pe-2 ps-2 ls_header--nav">
+            <div class="container-fluid">
+                <a class="navbar-brand w-25 link" href="#">
+                    <h2 class="mb-0">Boutikea<i class="fas fa-circle title-point"></i></h2>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active link" aria-current="page" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="#quiSommesNous">Qui sommes nous ?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="#boutique">Boutique</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="ls_switch me-4">
+                        <input type="checkbox" class="ls_checkbox" id="ls_checkbox">
+                        <label for="ls_checkbox" class="ls_label">
+                            <i class="fas fa-sun"></i>
+                            <i class='fas fa-moon'></i>
+                            <div class='ls_ball'>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main-container" data-current_page="#home">
+        <main id="home" class="td_home-slider height-100 position-absolute">
+            <!-- Slide 1 -->
+            <div class="td_home-slider__container td_home-slider__slide--1 td_home-slider__slide--current w-100 h-100 d-flex justify-content-start align-items-center position-absolute"
+                data-home-slider_slide="1">
+                <div class="slide-1 td_home-slider__container__text">
+                    <h1 class="title-boutikea">Boutikea<i
+                            class="fas fa-circle td_home-slider__container__text--title-point"></i></h1>
+                    <a href="#home" class="td_home-slider__container__text--link-more link">En savoir +</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="td_home-slider__container td_home-slider__slide--2 w-100 h-100 d-flex justify-content-start align-items-center position-absolute start-100"
+                data-home-slider_slide="2">
+                <div class="td_home-slider__container__text">
+                    <h2 class="title">Boutique<i class="fas fa-circle td_home-slider__container__text--title-point"></i>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi laboriosam, ipsam repellat
+                        nihil officiis? Vitae laudantium minus odio excepturi omnis! Ad fugiat quo voluptatum eaque
+                        nostrum sed. Veniam, reprehenderit.</p>
+                    <a href="#boutique" class="td_home-slider__container__text--link-more link">En savoir +</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="td_home-slider__container td_home-slider__slide--3 w-100 h-100 d-flex justify-content-start align-items-center position-absolute"
+                data-home-slider_slide="3">
+                <div class="td_home-slider__container__text">
+                    <h2 class="title">Contactez nous<i
+                            class="fas fa-circle td_home-slider__container__text--title-point"></i></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi laboriosam, ipsam repellat
+                        nihil officiis? Vitae laudantium minus odio excepturi omnis! Ad fugiat quo voluptatum eaque
+                        nostrum sed. Veniam, reprehenderit.</p>
+                    <a href="#contact" class="td_home-slider__container__text--link-more link">En savoir +</a>
+                </div>
+            </div>
+        </main>
+
+        <section id="quiSommesNous"
+            class="width-100 height-100 justify-content-center align-items-center position-absolute display-none transition about">
+            <div class="row mt-5 justify-content-between">
+                <div class="col-6 ps-5">
+                    <ul class="ls_section--timeline">
+                        <li class="ls_timeline--img1">
+                            <h3>Opening Ceremony</h3>
+                            <p>Get ready for an exciting event, this will kick off in amazing fashion with MOP &amp;
+                                Busta Rhymes as an opening show.</p>
+                        </li>
+                        <li class="ls_timeline--img2">
+                            <h3>Main Event</h3>
+                            <p>This is where it all goes down. You will compete head to head with your friends and
+                                rivals. Get ready!</p>
+                        </li>
+                        <li class="ls_timeline--img3">
+                            <h3>Closing Ceremony</h3>
+                            <p>See how is the victor and who are the losers. The big stage is where the winners bask in
+                                their own glory.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-5 pe-5 d-flex flex-column justify-content-center">
+                    <h2 class="pb-3 title">Qui sommes nous?</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae
+                        temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet,
+                        voluptatibus explicabo eaque quia laboriosam obcaecati
+                        soluta!
+                    </p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae
+                        temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet,
+                        voluptatibus explicabo eaque quia laboriosam obcaecati
+                        soluta!
+                    </p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, magni repudiandae
+                        temporibus explicabo laborum corporis? Maxime, quis quo quos in atque necessitatibus eveniet,
+                        voluptatibus explicabo eaque quia laboriosam obcaecati
+                        soluta!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="boutique" class="height-100 width-100 overflow-hidden position-absolute display-none transition">
+            <div class="lq_boutique row justify-content-between" data-current_link_boutique="#lq_product1">
+                <div class="col-1 position-relative height-100">
+                    <ul class="lq_nav d-flex flex-column position-absolute">
+                        <li class="lq_nav-item">
+                            <a class="lq_nav-link link" href="#lq_product1">Produit 1</a>
+                        </li>
+                        <li class="lq_nav-item">
+                            <a class="lq_nav-link link" href="#lq_product2">Produit 2</a>
+                        </li>
+                        <li class="lq_nav-item">
+                            <a class="lq_nav-link link" href="#lq_product3">Produit 3</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div id="lq_product1" class="col-10 d-flex flex-row">
+                    <div class="col-6">
+                        <h2 class="title">Armchair<i class="fas fa-circle title-point"></i></h2>
+                        <img src="assets/img/lq_img--petites/armchair.png" class="lq_img">
+                        <p class="title">199 €</p>
+                        <button type="button" class="btn btn-secondary">Ajouter au panier</button>
+                    </div>
+
+                    <div class="lq_product-details p-4 col-6">
+                        <div>
+                            <h3 class="lq_product-details--subtitle">Description</h3>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
+                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                        </div>
+                        <div>
+                            <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
+                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                        </div>
+                        <div>
+                            <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
+                            <p class="lq_product-details--content">Largeur: 82 cm</p>
+                            <p class="lq_product-details--content">Profondeur: 96 cm</p>
+                            <p class="lq_product-details--content">Hauteur: 101 cm</p>
+                            <p class="lq_product-details--content">Larg. assise: 49 cm</p>
+                            <p class="lq_product-details--content">Prof. assise: 54 cm</p>
+                            <p class="lq_product-details--content">Haut. assise: 45 cm</p>
+                        </div>
+                        <button class="btn btn-secondary link mt-2"><a href="#contact" id="contactProduct1"
+                                class="lq_link-more link text-white" name="product1">Nous contacter au sujet de ce
+                                produit</a></button>
+                    </div>
+                </div>
+
+
+                <div id="lq_product2" class="col-10 d-flex flex-row">
+                    <div class="col-6">
+                        <h2 class="title">Canapé<i class="fas fa-circle title-point"></i></h2>
+                        <img src="assets/img/lq_img--petites/canape.png" class="lq_img">
+                        <p class="title">399 €</p>
+
+                        <button type="button" class="btn btn-secondary">Ajouter au panier</button>
+                    </div>
+
+                    <div class="lq_product-details col-6 p-4">
+                        <div>
+                            <h3 class="lq_product-details--subtitle">Description</h3>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
+                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                        </div>
+                        <div>
+                            <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
+                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                        </div>
+                        <div>
+                            <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
+                            <p class="lq_product-details--content">Largeur: 216 cm</p>
+                            <p class="lq_product-details--content">Profondeur: 86 cm</p>
+                            <p class="lq_product-details--content">Hauteur: 88 cm</p>
+                            <p class="lq_product-details--content">Larg. assise: 185 cm</p>
+                            <p class="lq_product-details--content">Prof. assise: 58 cm</p>
+                            <p class="lq_product-details--content">Haut. assise: 44 cm</p>
+                        </div>
+                        <button class="btn btn-secondary link mt-2"><a href="#contact" id="contactProduct2"
+                                class="lq_link-more link text-white" name="product2">Nous contacter au sujet de ce
+                                produit</a></button>
+                    </div>
+                </div>
+
+
+                <div id="lq_product3" class="col-10 d-flex flex-row">
+                    <div class="col-6">
+                        <h2 class="title">Loveuse<i class="fas fa-circle title-point"></i></h2>
+                        <img src="assets/img/lq_img--petites/loveuse.png" class="lq_img">
+                        <p class="title">499 €</p>
+
+                        <button type="button" class="btn btn-secondary">Ajouter au panier</button>
+                    </div>
+
+                    <div class="lq_product-details col-6 p-4">
+                        <div>
+                            <h3 class="lq_product-details--subtitle">Description</h3>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
+                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                        </div>
+                        <div>
+                            <h3 class="lq_product-details--subtitle mt-5">Caractéristiques</h3>
+                            <p class="lq_product-details--content">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit. Neque ea suscipit praesentium repellendus, itaque quam molestias natus animi ex ad
+                                vero minima, impedit sapiente voluptates, esse nisi modi doloribus exercitationem.</p>
+                        </div>
+                        <div>
+                            <h3 class="lq_product-details--subtitle mt-5">Dimensions</h3>
+                            <p class="lq_product-details--content">Largeur: 169 cm</p>
+                            <p class="lq_product-details--content">Profondeur: 100 cm</p>
+                            <p class="lq_product-details--content">Hauteur: 40 cm</p>
+                            <p class="lq_product-details--content">Larg. assise: 160 cm</p>
+                            <p class="lq_product-details--content">Prof. assise: 90 cm</p>
+                            <p class="lq_product-details--content">Haut. assise: 40 cm</p>
+                        </div>
+                        <button class="btn btn-secondary link mt-2"><a href="#contact" id="contactProduct3"
+                                class="lq_link-more link text-white" name="product3">Nous contacter au sujet de ce
+                                produit</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="height-100 width-100 text-center position-absolute display-none transition">
+            <div class="col-6 h-100">
+                <img src="assets/img/lq_img--petites/contact.jpg" class="h-100 w-100 lq_cover lq_img">
+            </div>
+            <div class="col-6 h-100 d-flex flex-column justify-content-center">
+                <h2 class="title mt-5 mb-5">Nous contacter</h2>
+                <form method="#" id="contactForm" class="w-50 mx-auto" autocomplete="off" name="contact">
+                    <div class="input-group mb-2">
+                        <input autocomplete="off" type="text" id="lastname" class="form-control" placeholder="Nom" />
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <input autocomplete="off" type="text" id="firstname" class="form-control"
+                            placeholder="Prénom" />
+                    </div>
+
+                    <!-- Champ caché qui s'affiche lorsque l'on clique sur "en savoir plus sur le produit"-->
+                    <div id="productField" class="input-group d-none mb-2">
+                        <input id="productValue" type="text" class="form-control" value="" disabled="disabled" />
+                    </div>
+
+                    <div class="input-group mb-2">
+                        <textarea id="message" name="message" class="form-control" placeholder="Message"></textarea>
+                    </div>
+
+                    <div class="form-row mt-4">
+                        <button type="button" name="return"
+                            class="btn btn-block btn-secondary link me-4">Annuler</button>
+                        <button type="submit" id="send" name="send"
+                            class="btn btn-block btn-secondary link">Envoyer</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="inscriptionNexL" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="tilte">Inscription News Letter<i class="fas fa-circle title-point"></i></h5>
+                </div>
+                <div class="ms-auto me-3 my-3">
+                    <button type="button" name="return" data-bs-dismiss="modal"
+                        class="btn btn-block btn-secondary link me-4">Annuler</button>
+                    <button type="submit" id="#validInscription" name="send" class="btn btn-block btn-secondary link"
+                        data-bs-dismiss="modal">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox-->
+    <div class="lq_img--lightbox"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
@@ -28,5 +351,3 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
 </body>
-
-</html>

@@ -77,7 +77,6 @@ h2 {
     z-index: 1;
 }
 
-
 /*Btn Dark mode*/
 
 .ls_checkbox {
@@ -124,9 +123,9 @@ main {
     width: 100%;
 }
 
-section {
+/* section {
     height: 100vh;
-}
+} */
 
 .td_home-slider__slide--1 {
     background-image: url(../img/modern-armchair-5.png);
@@ -331,10 +330,6 @@ ul.td_home-slider__nav li {
 
 
 /* ANIMATIONS JQUERY */
-
-#quiSommesNous {
-    transform: scale(0);
-}
 
 .animation_dezoom {
     animation-name: animation_dezoom;

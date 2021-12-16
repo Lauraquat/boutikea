@@ -123,15 +123,16 @@ $(document).ready(function() {
 
     /*modal*/
     var j = 0;
-    if (j == 0) {
-        $("body").mouseleave(function() {
+
+    $("body").mouseleave(function() {
+        if (j == 0) {
             j = j + 1;
             $('#inscriptionNewL').modal('show');
             $('#annulerInscription, #validInscription').click(function() {
                 $('#inscriptionNewL').modal('hide');
             });
-        });
-    }
+        };
+    });
     /* changement monnaie*/
     var dollar = $('#dollar');
     var euro = $('#euro');

@@ -4,6 +4,11 @@ $(document).ready(function () {
     var boutique = $("#boutique");
     var contact = $("#contact");
 
+    var page_boutique_1 = $("#lq_product1");
+    var page_boutique_2 = $("#lq_product2");
+    var page_boutique_3 = $("#lq_product3");
+ 
+
     // var clone_home = home.clone();
     // var clone_about = about.clone();
     // var clone_boutique = boutique.clone();
@@ -58,27 +63,41 @@ $(document).ready(function () {
     var current_page_id = $("#main-container").data("current_page");
     var current_page = $(`${current_page_id}`);
 
+    var current_page_boutique_id = $(".lq_boutique").data("current_link_boutique");
+    var current_page_boutique = $(`${current_page_boutique_id}`);
+
+
+
     /**
     * Transmet le href de la page sur laquelle on veut aller ainsi que l'id de la page courante à la fonction de transition animée
     */
     $(document).on('click', 'a', function (e) {
         let hrefLink = $(this).attr("href");
         if (hrefLink != current_page_id) {
-            animatedTransition(hrefLink, current_page, current_page_id);
+            animatedTransition(hrefLink, current_page, current_page_id, current_page_boutique, current_page_boutique_id);
             e.preventDefault();
         }
     });
 
 
-    function animatedTransition(targetId, currentPage, currentPageId) {
+    function animatedTransition(targetId, currentPage, currentPageId, currentPageBoutique, currentPageBoutiqueId) {
 
         if (targetId == "#quiSommesNous") {
             if (currentPageId == "#home") {
                 home.fadeOut(1000);
-            } else if (currentPageId == "#boutique") {
+            }
+            else if (currentPageId == "#boutique") {
                 boutique.css({ left: "100%" });
                 setTimeout(function () {
                     boutique.hide();
+                }, 1000);
+            }
+            else if (currentPageId == "#contact") {
+                contact.css({ right: "100%" });
+                contact.css({ transform: "rotate(50deg)" });
+                setTimeout(function () {
+                    contact.removeClass("row");
+                    contact.addClass("display-none");
                 }, 1000);
             }
 
@@ -94,16 +113,27 @@ $(document).ready(function () {
             $("#main-container").attr("data-current_page", targetId);
             current_page = $(`${targetId}`);
             current_page_id = targetId;
-        } else if (targetId == "#home") {
+        }
+
+        else if (targetId == "#home") {
             if (currentPageId == "#quiSommesNous") {
                 about.css({ transform: "scale(0)" });
                 setTimeout(function () {
                     about.removeClass("display-flex").addClass("display-none");
                 }, 1000);
-            } else if (currentPageId == "#boutique") {
+            }
+            else if (currentPageId == "#boutique") {
                 boutique.css({ left: "100%" });
                 setTimeout(function () {
                     boutique.hide();
+                }, 1000);
+            }
+            else if (currentPageId == "#contact") {
+                contact.css({ right: "100%" });
+                contact.css({ transform: "rotate(50deg)" });
+                setTimeout(function () {
+                    contact.removeClass("row");
+                    contact.addClass("display-none");
                 }, 1000);
             }
 
@@ -116,13 +146,24 @@ $(document).ready(function () {
             $("#main-container").attr("data-current_page", targetId);
             current_page = $(`${targetId}`);
             current_page_id = targetId;
-        } else if (targetId == "#boutique") {
+        }
+
+        else if (targetId == "#boutique") {
             if (currentPageId == "#home") {
                 home.fadeOut(1000);
-            } else if (currentPageId == "#quiSommesNous") {
+            }
+            else if (currentPageId == "#quiSommesNous") {
                 about.css({ transform: "scale(0)" });
                 setTimeout(function () {
                     about.removeClass("display-flex").addClass("display-none");
+                }, 1000);
+            }
+            else if (currentPageId == "#contact") {
+                contact.css({ right: "100%" });
+                contact.css({ transform: "rotate(50deg)" });
+                setTimeout(function () {
+                    contact.removeClass("row");
+                    contact.addClass("display-none");
                 }, 1000);
             }
 
@@ -138,6 +179,46 @@ $(document).ready(function () {
             $("#main-container").attr("data-current_page", targetId);
             current_page = $(`${targetId}`);
             current_page_id = targetId;
+        }
+
+        else if (targetId == "#contact") {
+            if (currentPageId == "#home") {
+                home.fadeOut(1000);
+            }
+            else if (currentPageId == "#boutique") {
+                boutique.css({ left: "100%" });
+                setTimeout(function () {
+                    boutique.hide();
+                }, 1000);
+            }
+            else if (currentPageId == "#quiSommesNous") {
+                about.css({ transform: "scale(0)" });
+                setTimeout(function () {
+                    about.removeClass("display-flex").addClass("display-none");
+                }, 1000);
+            }
+
+            setTimeout(function () {
+                contact.css({ right: "100%" });
+                contact.css({ transform: "rotate(-50deg)" });
+                contact.removeClass("display-none");
+                contact.addClass("row");
+            }, 1000);
+            setTimeout(function () {
+                contact.css({ right: "0" });
+                contact.css({ transform: "rotate(0)" });
+            }, 1100);
+
+             // Nouvelle page courante
+             $("#main-container").attr("data-current_page", targetId);
+             current_page = $(`${targetId}`);
+             current_page_id = targetId;
+        }
+
+        if (targetId == "#lq_product2") {
+            if (currentPageBoutiqueId == "#lq_product1") {
+                page_boutique_1.css({top: "100%"});
+            }
         }
     }
 });

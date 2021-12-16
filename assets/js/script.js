@@ -34,6 +34,7 @@ $(document).ready(function () {
         $(this).addClass('td_home-slider__nav__link--current');
     });
 
+
     /**
      * Add the home slider navigation bar.
      */
@@ -53,6 +54,7 @@ $(document).ready(function () {
         }
     }
 
+
     /**
      * Animations
      */
@@ -61,8 +63,6 @@ $(document).ready(function () {
 
     var current_page_boutique_id = $(".lq_boutique").data("current_link_boutique");
     var current_page_boutique = $(`${current_page_boutique_id}`);
-
-
 
     /**
      * Transmet le href de la page sur laquelle on veut aller ainsi que l'id de la page courante à la fonction de transition animée
@@ -74,7 +74,6 @@ $(document).ready(function () {
             e.preventDefault();
         }
     });
-
 
     function animatedTransition(targetId, currentPageId, currentPageBoutique, currentPageBoutiqueId) {
 
@@ -219,6 +218,7 @@ $(document).ready(function () {
         }
     }
 
+
     /*lien entre produits et page contact*/
     $('.lq_link-more').click(function () {
         var value = $(this).attr("name");
@@ -229,7 +229,7 @@ $(document).ready(function () {
     });
 
 
-    // Initialisation des notifications
+    /*Initialisation des notifications*/
     $("#successNotification").jqxNotification({
         width: 250,
         position: "bottom-right",
@@ -252,6 +252,7 @@ $(document).ready(function () {
         template: "error"
     });
 
+
     /*Appel des notifications + réinitialisation du formulaire*/
     $('#send').click(function (e) {
         e.preventDefault();
@@ -265,11 +266,13 @@ $(document).ready(function () {
         $("#errorText").text("Message non envoyé");
         $("#errorNotification").jqxNotification("open");
     });
+
     /*notif validation modal*/
     $('#validInscription').click(function () {
         $("#successText").text('Inscription effectuée');
         $("#successNotification").jqxNotification("open");
     });
+
 
     /*dark mode*/
     $('.ls_checkbox').on('change', function () {
@@ -293,7 +296,7 @@ $(document).ready(function () {
     });
 
 
-    //Affichage lightbox
+    /*Affichage lightbox*/
     $(".lq_img").click(function () {
         var img = $(this).attr('src');
         var imgLightbox = img.replace("lq_img--petites", "lq_img--grandes");
@@ -304,6 +307,7 @@ $(document).ready(function () {
     $(".lq_img--lightbox").click(function () {
         $(".lq_img--lightbox").fadeOut("fast");
     });
+
 
     /*modal*/
     var modal_affichee = "yes";
@@ -320,6 +324,8 @@ $(document).ready(function () {
             });
         }
     });
+
+
     /* changement monnaie*/
     var dollar = $('#dollar');
     var euro = $('#euro');

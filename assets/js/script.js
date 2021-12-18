@@ -73,6 +73,10 @@ $(document).ready(function () {
             animatedTransition(hrefLink, current_page_id, current_page_boutique, current_page_boutique_id);
             e.preventDefault();
         }
+        console.log(current_page_id);
+        if (current_page_id != "#contact") {
+            $("#productField").addClass("d-none");
+        }
     });
 
 
@@ -129,7 +133,6 @@ $(document).ready(function () {
 
             setTimeout(function () {
                 home.fadeIn(500);
-                about.removeClass("display-flex").addClass("display-none");
             }, 1000);
 
             // Nouvelle page courante
@@ -253,20 +256,83 @@ $(document).ready(function () {
     });
 
     /*Appel des notifications + réinitialisation du formulaire*/
-    $('#send').click(function (e) {
+    $(document).on("click", "#send", function (e) {
         e.preventDefault();
         $('#contactForm').trigger('reset');
         $("#successText").text('Message bien envoyé !');
         $("#successNotification").jqxNotification("open");
+
+        /**
+         * Redirection sur la page Home
+         */
+        contact.css({ right: "100%" });
+        contact.css({ transform: "rotate(50deg)" });
+        setTimeout(function () {
+            contact.removeClass("row");
+            contact.addClass("display-none");
+        }, 1000);
+
+        setTimeout(function () {
+            home.fadeIn(500);
+        }, 1000);
+
+        // Nouvelle page courante
+        $("#main-container").attr("data-current_page", "#home");
+        current_page = $("#home");
+        current_page_id = "#home";
     });
 
-    $('#return').click(function () {
+    $(document).on("click", "#return", function () {
         $('#contactForm').trigger('reset');
         $("#errorText").text("Message non envoyé");
         $("#errorNotification").jqxNotification("open");
+
+        if ($("#productField").hasClass("d-none")) {
+            // Redirection sur la page Home
+            contact.css({ right: "100%" });
+            contact.css({ transform: "rotate(50deg)" });
+            setTimeout(function () {
+                contact.removeClass("row");
+                contact.addClass("display-none");
+            }, 1000);
+
+            setTimeout(function () {
+                home.fadeIn(500);
+            }, 1000);
+
+            // Nouvelle page courante
+            $("#main-container").attr("data-current_page", "#home");
+            current_page = $("#home");
+            current_page_id = "#home";
+        } else {
+            // Redirection sur la page Boutique
+            contact.css({ right: "100%" });
+            contact.css({ transform: "rotate(50deg)" });
+            setTimeout(function () {
+                contact.removeClass("row");
+                contact.addClass("display-none");
+            }, 1000);
+
+            setTimeout(function () {
+                boutique.css({ left: "100%" });
+                boutique.show();
+            }, 1000);
+            setTimeout(function () {
+                boutique.css({ left: "0" });
+            }, 1100);
+
+            $("#productField").addClass("d-none");
+
+            // Nouvelle page courante
+            $("#main-container").attr("data-current_page", "#boutique");
+            current_page = $("#boutique");
+            current_page_id = "#boutique";
+        }
     });
+
+
     /*notif validation modal*/
-    $('#validInscription').click(function () {
+    $(document).on("click", "#validInscription", function () {
         $("#successText").text('Inscription effectuée');
         $("#successNotification").jqxNotification("open");
     });

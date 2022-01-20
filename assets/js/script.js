@@ -288,7 +288,7 @@ $(document).ready(function () {
             $('.lq_product-details, .navbar, .form-control, .modal-content').removeAttr('style');
             $('.navbar a, .navbar h2, #contact2 h2, #ls_contact-modal h2').removeAttr('style');
             $('#quiSommesNous, #quiSommesNous h2, #quiSommesNous h3').removeAttr('style');
-            $('#boutique h2, #boutique, #boutique a, #contact h2, #inscriptionNewL h2').removeAttr('style');
+            $('#boutique h2, .lq_product-details, #boutique a, #contact h2, #inscriptionNewL h2').removeAttr('style');
             $('.td_home-slider__slide--1,.td_home-slider__slide--2,.td_home-slider__slide--3, #contact2 img, .lq_cover').removeAttr('style');
             $(document.body, '.navbar').removeAttr('style');
 
